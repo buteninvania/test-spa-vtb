@@ -1,5 +1,5 @@
 import React, {useCallback, useReducer } from 'react';
-import { HashRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import {addShareAC, shareReducer } from './brms/share-reducer';
 import { ShareType } from './brms/share-reducer.types';
 import { Creation } from './components/Creation';
@@ -32,6 +32,7 @@ export const App = () => {
                     <Route path="create" element={<Creation addShare={addShare}/>}/>
                     <Route path="share/:shareId" element={<Share getDataShare={getDataShare}/>}/>
                     <Route path="list" element={<List shareList={state}/>}/>
+                    <Route path="/" element={<Navigate to="/create"/>}/>
                 </Routes>
             </div>
         </HashRouter>
