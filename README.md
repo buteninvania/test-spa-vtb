@@ -1,1 +1,1 @@
-##SPA using (React v17 - hooks reducers, mock requests, react-router v6, typescript, formik, mui)
+##SPA (React v17 - hooks reducers, mock requests, react-router v6, typescript, formik, mui)
